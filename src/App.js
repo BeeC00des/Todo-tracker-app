@@ -21,7 +21,7 @@ const App = () => {
 
   // Fetch Tasks
   const fetchTasks = async () => {
-    const res = await fetch('http://localhost:5000/tasks');
+    const res = await fetch('https://expense-tracker-6ftk9np3o-omobolarinwaye.vercel.app/tasks');
     // const res = "babe"
     const data = await res.json()
 
@@ -30,7 +30,7 @@ const App = () => {
 
   // Fetch Task
   const fetchTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`);
+    const res = await fetch(`https://expense-tracker-6ftk9np3o-omobolarinwaye.vercel.app/tasks/${id}`);
     console.log(res.json);
     const data = await res.json()
 
@@ -41,7 +41,7 @@ const App = () => {
 
   // Add Task
   const addTask = async (task) => {
-    const res = await fetch('http://localhost:5000/tasks', {
+    const res = await fetch('https://expense-tracker-6ftk9np3o-omobolarinwaye.vercel.app/tasks', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -60,7 +60,7 @@ const App = () => {
 
   // Delete Task
   const deleteTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+    const res = await fetch(`https://expense-tracker-6ftk9np3o-omobolarinwaye.vercel.app/tasks/${id}`, {
       method: 'DELETE',
     })
     //We should control the response status to decide if we will change the state or not.
